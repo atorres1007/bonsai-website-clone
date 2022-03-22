@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './bonsai/Bonsai_Home';
+import Navbar from './bonsai/Navbar';
+import JuniperPage from './bonsai/JuniperPage'
+import PinePage from './bonsai/PinePage';
+import JapaneseMaplePage from './bonsai/JapaneseMaplePage';
+import CherryBlossomPage from './bonsai/CherryBlossomPage';
+import CedarPage from './bonsai/CedarPage';
+import GinsengFicusPage from './bonsai/GinsengFicusPage';
+import WeepingFigPage from './bonsai/WeepingFigPage';
+import DwarfJadePage from './bonsai/DwarfJadePage';
+import PomegranatePage from './bonsai/PomegranatePage';
 
-function App() {
+function  App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+        <Navbar />
+        <div>
+          <Routes>
+            <Route exact path = "/" element={<Home />} />
+            <Route path = "/Juniper" element={<JuniperPage />}/>
+            <Route path = "/Pine" element={<PinePage />} />
+            <Route path = "/JapaneseMaple" element={<JapaneseMaplePage />}/>
+            <Route path = "/CherryBlossom" element={<CherryBlossomPage/>} />
+            <Route path = "/Cedar" element={<CedarPage />}/>
+            <Route path = "/GinsengFicus" element={<GinsengFicusPage />}/>
+            <Route path = "/WeepingFig" element={<WeepingFigPage />}/>
+            <Route path = "/DwarfJade" element={<DwarfJadePage/>}/>
+            <Route path = "/Pomegranate" element={<PomegranatePage />}/>
+          </Routes>
+        </div>
+      </div>
   );
 }
-
 export default App;

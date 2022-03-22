@@ -1,38 +1,261 @@
-.App {
-  text-align: center;
+@import url("//db.onlinewebfonts.com/c/54ad1a311e37ed132bf54f7dbcc1d7a1?family=Copyright+Klim+Type+Foundry");
+@font-face {font-family: "Copyright Klim Type Foundry";
+    src: url("//db.onlinewebfonts.com/t/54ad1a311e37ed132bf54f7dbcc1d7a1.eot"); 
+    src: url("//db.onlinewebfonts.com/t/54ad1a311e37ed132bf54f7dbcc1d7a1.eot?#iefix")
+    format("embedded-opentype"), url("//db.onlinewebfonts.com/t/54ad1a311e37ed132bf54f7dbcc1d7a1.woff2") 
+    format("woff2"), url("//db.onlinewebfonts.com/t/54ad1a311e37ed132bf54f7dbcc1d7a1.woff")
+    format("woff"), url("//db.onlinewebfonts.com/t/54ad1a311e37ed132bf54f7dbcc1d7a1.ttf") 
+    format("truetype"), url("//db.onlinewebfonts.com/t/54ad1a311e37ed132bf54f7dbcc1d7a1.svg#Copyright Klim Type Foundry") 
+    format("svg");
+}
+*{
+    font-family: "Copyright Klim Type Foundry";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*-----Navbar-----*/
+
+.navbar {
+    position: fixed;
+    top:0;
+    text-align: center;
+    width: 100vw;
+    height: 60px;
+    z-index: 99;
+    background-color: white;
+}
+.navbar span {
+    color:white;
+}
+.navbar-title {
+    display: inline-block;
+    color: black;
+    font-size: 20px;
+}
+.menu-icon  {
+    width: 60px;
+    float: left;
+    margin-left: 15px;
+    height: auto;
+    cursor: pointer;
+}
+.search-icon {
+    width: auto;
+    height: 50px;
+}
+.search-icon-btn {
+    width: 50px;
+    padding: 0;
+    height: 50px;
+    float: right;
+    margin-right: 20px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.closed{
+    width: 50px;
+    float: right;
+    position: absolute;
+    z-index: 7;
+}
+.open {
+    width: 50px;
+    position: relative;
+    float: right;
+    z-index: 7;
+    background-color: black;
+}
+/*-----Home Page-----*/
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+    .absolute img {
+        width: 100vw;
+        height: calc(100vw - 125px);
+    }
+    .description {
+        height: calc(100vw - 125px);
+        width: 100vw;
+        font-size: 1.5vw;
+        min-width: 100vw;
+    }
+    .pad1 {
+        margin-top: 60px;
+    }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+    .absolute img {
+        width: 50vw;
+        height: calc(50vw - 125px);
+    }
+    .description {
+        height: calc(50vw - 125px);
+        width: 50vw;
+        font-size: 12px;
+        min-width: 50vw;
+    }
+    .pad1, .pad2 {
+        margin-top: 60px;
+    }
+}
+@media (min-width:769px ) and (max-width: 1024px) {
+    .absolute img {
+        width: 33.33vw;
+        height: calc(33.33vw - 125px);
+    }
+    .description {
+        min-width: 33.33vw;
+        height: calc(33.33vw - 125px);
+        font-size: 1.5;
+        width: auto;
+    }
+    .pad1, .pad2, .pad3 {
+        margin-top: 60px;
+    }
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .absolute img {
+        min-width: 25vw;
+        max-width: 25vw;
+        width: auto;
+        height: calc(25vw - 125px);
+        max-height: 33.33vh;
+    }
+    .description {
+        min-width: 25vw;
+        width: auto;
+        font-size: 14px;
+        height: calc(25vw - 125px);
+        max-height: 33.33vh;
+    }
+    .pad1, .pad2, .pad3, .pad4 {
+        margin-top: 60px;
+    }
+}
+@media (min-width: 1201px) {
+    .absolute img {
+        min-width: 20vw;
+        max-width: 20vw;
+        width: auto;
+        height: calc(20vw - 125px);
+        max-height: 33.33vh;
+    }
+    .description {
+        min-width: 20vw;
+        width: auto;
+        font-size: 12px;
+        height: calc(20vw - 125px);
+        max-height: 33.33vh;
+    }
+    .pad1, .pad2, .pad3, .pad4, .pad5 {
+        margin-top: 60px;
+    }
+}
+.description span {
+    font-style: italic;
+    font-size: 0.7em;
+}
+.description h2 {
+    font-size: 2.5vh;
+}
+.description hr {
+    width: 50%;
+}
+.pad, .pad1, .pad2, .pad3, .pad4, .pad5 {
+    display: inline-block;
+}
+.pad:hover .description, .pad1:hover .description, 
+.pad2:hover .description, .pad3:hover .description,
+.pad4:hover .description, .pad5:hover .description{
+    z-index: 3;
+    perspective: 10em;
+    transform: rotateY(180deg);
+}
+.pad:hover .absolute img, .pad1:hover .absolute img, 
+.pad2:hover .absolute img, .pad3:hover .absolute img,
+.pad4:hover .absolute img, .pad5:hover .absolute img{
+    transform: rotatey(180deg);
+}
+.absolute img {
+    transition: transform ease-in-out 1s;
+}
+.description {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    text-align: center;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    cursor: pointer;
+    transition: transform ease-in-out 1s;
+    transform-style: preserve-3d;
+}
+.description h1 {
+    transform: rotateY(-180deg);
+}
+.name {
+    padding-top: 1vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.absolute {
+    position: absolute;
+    display: inline-block;
+    z-index: 2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+/*-----Individual Bonsai Page-----*/
 
-.App-link {
-  color: #61dafb;
+.image {
+    padding-top: 60px;
+    text-align: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image h1 {
+    font-size: 5vw;
+}
+.image img {
+    display:inline;
+    width: 80vw;
+    height: auto;
+}
+.page {
+    font-size: 1.5vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-top: 5vh;
+    font-size: 4vh;
+    padding-bottom: 60px;
+    line-height: 1.5;
+}
+.page-content span{
+    font-size: 4vh;
+    color: grey;
+    font-style: italic;
+}
+.page-content {
+    display: inline;
+    width: 80vw;
+    margin-left: 20px;
+}
+.page-content hr {
+    width: 80vw;
+    height: 2px;
+    outline: none;
+    background-color: black;
+}
+.page-content li {
+    margin-left: 13vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-right: 15vw;
+    font-size: 3vh;
+    line-height: 1.5;
 }
