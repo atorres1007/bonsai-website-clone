@@ -183,9 +183,9 @@ body {
 .pad4:hover .absolute img, .pad5:hover .absolute img{
     transform: rotatey(180deg);
 }*/
-.absolute img {
+/*.absolute img {
     transition: transform ease-in-out 1s;
-}
+}*/
 .description {
     position: relative;
     display: inline-block;
@@ -196,8 +196,6 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
     cursor: pointer;
-    transition: transform ease-in-out 1s;
-    transform-style: preserve-3d;
 }
 /*.description h1 {
     transform: rotateY(-180deg);
