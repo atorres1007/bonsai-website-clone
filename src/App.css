@@ -171,18 +171,18 @@ body {
 .pad, .pad1, .pad2, .pad3, .pad4, .pad5 {
     display: inline-block;
 }
-.pad:hover .description, .pad1:hover .description, 
+/*.pad:hover .description, .pad1:hover .description, 
 .pad2:hover .description, .pad3:hover .description,
 .pad4:hover .description, .pad5:hover .description{
     z-index: 3;
     perspective: 10em;
     transform: rotateY(180deg);
-}
-.pad:hover .absolute img, .pad1:hover .absolute img, 
+}*/
+/*.pad:hover .absolute img, .pad1:hover .absolute img, 
 .pad2:hover .absolute img, .pad3:hover .absolute img,
 .pad4:hover .absolute img, .pad5:hover .absolute img{
     transform: rotatey(180deg);
-}
+}*/
 .absolute img {
     transition: transform ease-in-out 1s;
 }
@@ -199,9 +199,9 @@ body {
     transition: transform ease-in-out 1s;
     transform-style: preserve-3d;
 }
-.description h1 {
+/*.description h1 {
     transform: rotateY(-180deg);
-}
+}*/
 .name {
     padding-top: 1vh;
 }
