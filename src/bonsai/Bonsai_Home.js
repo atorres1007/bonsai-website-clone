@@ -96,7 +96,7 @@ function  Home() {
           <img src={pomegranate}/>
         </div>
         <div className='description'>
-          <h1 className='name'>POMEGRANTE</h1>
+          <h1 className='name'>POMEGRANATE</h1>
           <hr/>
           <h1><span>(PUNICA GRANATUM)</span></h1>
         </div>
